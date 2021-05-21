@@ -69,3 +69,23 @@ button:hover{
     transition: 300ms ease-in-out;
 }
 
+@media(max-width:380px){
+
+    .container{
+        width: 250px;
+        height: 500px;
+        flex-flow: row wrap;
+    }
+
+    .keep-button{
+        flex-flow: column wrap;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        margin-top: 14px;
+    }
+}
+
