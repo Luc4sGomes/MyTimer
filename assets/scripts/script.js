@@ -3,12 +3,12 @@ const startButton = document.querySelector('.start');
 const pauseButton = document.querySelector('.pause');
 const resetButton = document.querySelector('.reset');
 let seconds = 0;
+let timer;
 
 function startClock(){ //starts the timer
-  const timer = setInterval(function(){
+    timer = setInterval(function(){
     seconds ++;
     clock.innerHTML = getTimeSeconds(seconds); // write in clock the seconds formated
-
   },1000);
 }
 
@@ -23,7 +23,18 @@ function getTimeSeconds(seconds){ //return the date formated
 console.log(getTimeSeconds(10));
 
 startButton.addEventListener('click',function(event){
+  clearInterval(timer);
   startClock();
+});
+
+pauseButton.addEventListener('click',function(event){
+  clearInterval(timer);
+});
+
+resetButton.addEventListener('click',function(event){
+  clearInterval(timer);
+  clock.innerHTML = '00:00:00';
+  seconds = 0;
 });
 
 
