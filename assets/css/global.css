@@ -57,6 +57,7 @@ button{
     transition: 200ms ease-in-out;
     font-weight: bold;
     font-style: italic;
+    cursor: pointer;
 }
 
 button:hover{
