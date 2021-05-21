@@ -63,3 +63,8 @@ button:hover{
     background-color: var(--purple-dark);
 }
 
+.paused{
+    color: red;
+    transition: 300ms ease-in-out;
+}
+
